@@ -23,7 +23,7 @@ def menu():
 
         elif op=='b' or op=='B':
             
-            ayer = now + timedelta(days = -1)#resto un dia
+            ayer = now - timedelta(days = 1)#resto un dia
             return ayer #retorno el resultado
 
         elif op=='c' or op=='C':
@@ -33,7 +33,7 @@ def menu():
             return new_date
         else:
             print('\n\n<---Error en el ingreso de datos--->\n\n')
-            time.sleep(2)
+            time.sleep(1)
             pass
 
 
