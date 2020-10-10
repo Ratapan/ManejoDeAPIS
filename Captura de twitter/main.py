@@ -1,3 +1,4 @@
+from captura_de_twitter.key import key
 import requests
 import os
 import json
@@ -7,7 +8,8 @@ import json
 
 
 def auth():
-    return os.environ.get("AAAAAAAAAAAAAAAAAAAAAFZNIQEAAAAAbAd%2F1L2vBxY5w9ukyqyzBRD%2BdpA%3Dy0NcmckyktTdUqlZZVVXfb43P7Yxholiy7L559HjfVcF0bfTyu")
+    key= key()
+    return os.environ.get(key)
 
 
 def create_url():

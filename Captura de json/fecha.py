@@ -53,7 +53,6 @@ def SCM(m): #suma 0 en el principio de un mes en caso de que este sea menor a 10
 
     else:
         return m
- 
 
 
 def date():
@@ -71,8 +70,22 @@ def date():
 
     return date_now #esta funcion se encargara de retornar la fecha en el formato para la url
 
+def datefile():
+
+    a    = datetime.datetime.now()
+    d    = a.day
+    m    = a.month
+    agno = a.year
+
+    dia = SCD(d) 
+    mes = SCM(m)
+
+    date_now = (f'{agno}{mes}{dia}')
+
+    return date_now
+
 def hr(): #retorna un formato de hora para el guardado del archivo
-   
+
     a   = datetime.datetime.now()
     hor = (f'{a.hour}_{a.minute}')
     return hor
